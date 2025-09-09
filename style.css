@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 50% 50%, #0a0a23 0%, #000 100%);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.loader-container {
+    position: relative;
+    width: 90vw;
+    max-width: 400px; 
+    height: 70vw;
+    max-height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#loader {
+    position: relative;
+    width: 90vw;
+    max-width: 400px;
+    height: 70vw;
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-circle {
+    position: absolute;
+    z-index: 10;
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    border: 5px solid #FFD700;
+    border-radius: 50%;
+    overflow: hidden;
+    background: transparent;
+    transition: all 1s ease;
+}
+
+.timer-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(135deg, #FFD700 40%, #FFA500 60%);
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom;
+    transition: height 0.1s linear;
+}
+
+.circle {
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    transition: transform 0.5s linear;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.planet-mercury { background: radial-gradient(circle at 30% 30%, #b2b2b2 0%, #888 100%); }
+.planet-venus { background: radial-gradient(circle at 30% 30%, #e6c290 0%, #c69c6d 100%); }
+.planet-earth { background: radial-gradient(circle at 30% 30%, #3d85c6 0%, #1c3f73 100%); }
+.planet-mars { background: radial-gradient(circle at 30% 30%, #d35400 0%, #8b2a00 100%); }
+.planet-jupiter { background: radial-gradient(circle at 30% 30%, #c68642 0%, #7b4f2f 100%); }
+.planet-saturn { background: radial-gradient(circle at 30% 30%, #f5deb3 0%, #d2b48c 100%); }
+.planet-uranus { background: radial-gradient(circle at 30% 30%, #7fdbff 0%, #2e8fb5 100%); }
+.planet-neptune { background: radial-gradient(circle at 30% 30%, #2e3c88 0%, #000a33 100%); }
+
+#welcome-text {
+    position: absolute;
+    font-size: 6vw;
+    color: #FFD700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    letter-spacing: 10px;
+}
+
+#sun.in-text {
+    width: 55px;  
+    height: 55px;
+    max-width: 70px;
+    max-height: 70px;
+    margin: 0 5px;
+    position: static;
+    transform: translateY(5px);
+}
+
+#welcome-text.show {
+    opacity: 1;
+}
+
+#welcome-text span {
+    margin: 0 5px;
+    color: #d1d5db;
+    font-weight: bold;
+}
+
+#solar-text {
+    font-size: 3vw;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FF4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 0.8s ease-out;
+    text-align: center;
+    transform: translateY(-20px);
+}
+
+#solar-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+    #welcome-text {
+        font-size: 6vw;
+        letter-spacing: 5px;
+    }
+    #solar-text {
+        font-size: 3vw;
+    }
+    .center-circle {
+        width: 20vw;
+        height: 20vw;
+        border-width: 3px;
+    }
+    .circle {
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #welcome-text {
+        font-size: 8vw;
+        letter-spacing: 5px;
+    }
+    #solar-text {
+        font-size: 4vw;
+    }
+    .center-circle {
+        width: 25vw;
+        height: 25vw;
+        border-width: 2px;
+    }
+    .circle {
+        width: 10vw;
+        height: 10vw;
+    }
+}
