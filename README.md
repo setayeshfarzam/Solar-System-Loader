@@ -4,8 +4,7 @@ A **creative and fun solar system loader** with **planets that react and move aw
 This project is **fully responsive** and built using **HTML, CSS, and JavaScript**. 🎨✨
 
 ## 🌐 Live Demo
-Check it out online:  
-[👀 View Project](https://setayeshfarzam.github.io/Solar-System-Loader/)
+Check it out online:  [👀 View Project](https://setayeshfarzam.github.io/Solar-System-Loader/)
 
 ## 🌟 Features
 - 🪐 Interactive solar system with planets reacting to mouse movement  
