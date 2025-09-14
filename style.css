@@ -146,7 +146,6 @@ body {
     transform: translateY(0);
 }
 
-
 @media (max-width: 768px) {
     #welcome-text {
         font-size: 6vw;
@@ -166,7 +165,6 @@ body {
     }
 }
 
-
 @media (max-width: 480px) {
     #welcome-text {
         font-size: 8vw;
@@ -184,4 +182,5 @@ body {
         width: 10vw;
         height: 10vw;
     }
+
 }
